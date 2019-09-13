@@ -63,7 +63,7 @@ $(function() {
   function ajaxSend(formName, data) {
     jQuery.ajax({
       type: "POST",
-      url: "sendmail.php",
+      url: "telegram.php",
       data: data,
       success: function() {
         $(".modal").popup("hide");
@@ -86,6 +86,9 @@ $(function() {
       }
   });
 
+  if($(this).scrollTop()>20){
+      $('.header').addClass('header--active');
+  }
 
   //--------------------закриття меню при кліку на ссилку якоря--------------------
 
